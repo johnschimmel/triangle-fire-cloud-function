@@ -1,6 +1,8 @@
 var api = require('./api');
 
 var cachedData = null;
+var cachedExpire = new Date(0);
+var millisecondsToLive = 120*1000;
 
 var handleCors = (res) => {
     // Send response to OPTIONS requests
@@ -11,7 +13,8 @@ var handleCors = (res) => {
 }
 
 var handleData = (res) => {
-    if (cachedData != null) {
+    if (cachedData != null && (cachedExpire > new Date().getTime()) ) {
+        console.log('from cache')
         res.json(cachedData);
     } else {
         // fetch fresh data
@@ -21,6 +24,8 @@ var handleData = (res) => {
                 console.error(err);
             } else {
                 cachedData = data;
+                cachedExpire = new Date().getTime() + millisecondsToLive;
+                console.log('fresh!!!!')
                 res.json(data);
             }  
         })     
