@@ -1,6 +1,9 @@
 
 
-on: [release]
+on:
+  release:
+    types: [published]
+    
 name: Run gcloud command
 jobs:
   GCPAuthenticate:

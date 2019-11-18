@@ -21,7 +21,7 @@ var handleData = (res) => {
                 console.error(err);
             } else {
                 cachedData = data;
-                res.json(data)
+                res.json(data);
             }  
         })     
     }
