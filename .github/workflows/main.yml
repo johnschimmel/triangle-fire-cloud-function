@@ -15,4 +15,4 @@ jobs:
     - name: GCP List Clusters
       uses: actions/gcloud/cli@master
       with:
-        args: functions deploy triangleData --runtime nodejs10 --trigger-http
+        args: functions deploy triangleData --runtime nodejs10 --trigger-http --project triangle-fire-data
