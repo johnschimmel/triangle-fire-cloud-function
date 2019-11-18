@@ -1,0 +1,14 @@
+{
+  "name": "triangleFireData",
+  "version": "1.0.0",
+  "description": "Google Spreadsheet to JSON API app",
+  "main": "app.js",
+  "author": "Nick Moreton",
+  "dependencies": {
+    "request": "^2.69.0"
+  },
+  "license": "ISC",
+  "scripts": {
+    "local-function": "npx @google-cloud/functions-framework --target=triangleData"
+  }
+}
