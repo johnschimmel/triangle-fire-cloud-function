@@ -2,13 +2,8 @@ var request = require('request');
 
 module.exports = function (cb) {
   var id = '1nxXH1zQ77WaP1npsoSpUcMurJxVBfiTzf11dRvX3NvU', 
-    sheet = 1,
-    query = '',
-    useIntegers = true,
-    showRows = true,
-    showColumns = false,
     //url = 'https://spreadsheets.google.com/feeds/list/' + id + '/' + sheet + '/public/values?alt=json';
-    url = `https://sheets.googleapis.com/v4/spreadsheets/1nxXH1zQ77WaP1npsoSpUcMurJxVBfiTzf11dRvX3NvU/values/names/?alt=json&key=${process.env.SHEETS_API_KEY}`;
+    url = `https://sheets.googleapis.com/v4/spreadsheets/${process.env.SHEET_ID}/values/${process.env.SHEET_TAB_NAME}/?alt=json&key=${process.env.SHEETS_API_KEY}`;
     //console.log('fetching', url);
  
     const data = require('./data.json');
