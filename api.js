@@ -8,7 +8,7 @@ module.exports = function (cb) {
     showRows = true,
     showColumns = false,
     //url = 'https://spreadsheets.google.com/feeds/list/' + id + '/' + sheet + '/public/values?alt=json';
-    url = 'https://sheets.googleapis.com/v4/spreadsheets/1nxXH1zQ77WaP1npsoSpUcMurJxVBfiTzf11dRvX3NvU/values/names/?alt=json&key=AIzaSyDSpcFpXg5NTSaaCv0z1tIwNugKtIJH_gA';
+    url = `https://sheets.googleapis.com/v4/spreadsheets/1nxXH1zQ77WaP1npsoSpUcMurJxVBfiTzf11dRvX3NvU/values/names/?alt=json&key=${process.env.SHEETS_API_KEY}`;
     //console.log('fetching', url);
  
     const data = require('./data.json');
