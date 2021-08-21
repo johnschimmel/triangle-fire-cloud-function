@@ -2,7 +2,7 @@
   "name": "triangleFireData",
   "version": "1.0.0",
   "description": "Google Spreadsheet to JSON API app",
-  "main": "app.js",
+  "main": "index.js",
   "author": "Nick Moreton",
   "dependencies": {
     "request": "^2.69.0"
